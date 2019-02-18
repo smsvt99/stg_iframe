@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <style>
+        iframe {
+            width: 1000px;
+            height: 100%;
+            display: none;
+            margin: auto;
+            border: none;
+        }
+        #ul_container{
+            height: 100%;
+            border: 0 solid black;
+            border-right-width: 1px;
+            border-top-width: 1px;
+            background-color: silver;
+
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+        li{
+            margin: 5px 10px;
+        }
+       ul{
+        margin-top: 30px;
+       }
+        p{
+            width: 80%;
+            margin: 20px 100px;
+            display: block;
+            font-size: 20px;
+
+        }
+        h1{
+            text-align: center;
+        }
+        #iframe_div{
+            border: 0 solid black;
+            border-top-width: 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+        <h1>Page Designs for STG</h1>
+    <div class="container">
+            <div id="ul_container">
+                    <ul>
+                        <a href="#" onclick="toggleVisibility('paragraph')"><li>ABOUT</li></ABOUT></a>
+                        <a href="#" onclick="index()"><li>My Proposed Design</li></a>
+                        <a href="#" onclick="showPage('ahriLanding.html')"><li>ahriLanding.html</li></a>
+                        <a href="#" onclick="showPage('ahriLandingWithIcons.html')"><li>ahriLandingWithIcons.html</li></a>
+                        <a href="#" onclick="showPage('astmChild.html')"><li>astmChild.html</li></a>
+                        <a href="#" onclick="showPage('astmParent.html')"><li>astmParent.html</li></a>
+                        <a href="#" onclick="showPage('fedRegAbstract.html')"><li>fedRegAbstract.html</li></a>
+                        <a href="#" onclick="showPage('genInfo.html')"><li>genInfo.html</li></a>
+                        <a href="#" onclick="showPage('icsChild.html')"><li>icsChild.html</li></a>
+                        <a href="#" onclick="showPage('icsParent.html')"><li>icsParent.html</li></a>
+                        <a href="#" onclick="showPage('standard.html')"><li>standard.html</li></a>
+                        <a href="#" onclick="showPage('standardBigPreview.html')"><li>standardBigPreview.html </li></a>
+                        <a href="#" onclick="showPage('standardBigPreviewNoBlockV1.html')"><li>standardBigPreviewNoBlockV1.html</li></a>
+                        <a href="#" onclick="showPage('standardBigPreviewNoBlockV2.html')"><li>standardBigPreviewNoBlockV2.html</li></a>
+                    </ul>
+                </div>
+        <div id="iframe_div">
+            <iframe id='iframe' src="https://smsvt99.github.io/stgV2/designsFromWix/standardBigPreview.html">
+            </iframe>
+            <p id="paragraph">
+                Standards Technology Group is a team of three engineers building a platform to  sell various industrial standards from publishers such as the International Organization for Standardization, the American Society for Test and Materials, the US Department of Defence, etc. The team's expertise does not include CSS and HTML, and thus they have hired me to give their site a 'face-lift.' The client makes these designs on Wix, but did not want all of the JavaScript and large files that Wix uses for those pages: thus they employed me as a freelance developer to replicate the designs. Some of these are static landing pages, others are examples of templates meant to be populated with data by PHP. Full integration of the new designs is not yet complete, so I present the page designs here. Click on the links on the left to view the design. </p>
+        </div>
+
+    </div>
+</body>
+<script>
+    function showPage(url){
+        toggleVisibility('iframe')
+        document.getElementById('iframe').src = "https://smsvt99.github.io/stgV2/designsFromWix/" + url
+    }
+    function toggleVisibility(command){
+        if (command === 'iframe'){
+            document.getElementById('iframe').style.display = 'block'
+            document.getElementById('paragraph').style.display = 'none'
+        } if (command === 'paragraph'){
+            document.getElementById('iframe').style.display = 'none'
+            document.getElementById('paragraph').style.display = 'block'
+        }
+    }
+    function index(){
+        toggleVisibility('iframe')
+        document.getElementById('iframe').src = "https://smsvt99.github.io/stgV2/standardPageDraft.html"
+    }
+
+</script>
+
+</html>
